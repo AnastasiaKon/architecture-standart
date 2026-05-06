@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="61d661df-7ab2-42d3-988d-02943cbaca51">
+    <mxGraphModel dx="1885" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" value="C4 Component. Компоненты передачи ставок в кол-центры" vertex="1">
+          <mxGeometry height="40" width="1500" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="back" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Бэк-офис депозитов" vertex="1">
+          <mxGeometry height="70" width="50" x="60" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="credit" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Бэк-офис кредитов" vertex="1">
+          <mxGeometry height="90" width="60" x="65" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="operator" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Оператор кол-центра" vertex="1">
+          <mxGeometry height="80" width="60" x="60" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="rates_admin" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Rates Admin UI&lt;br&gt;управление ставками" vertex="1">
+          <mxGeometry height="80" width="220" x="340" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rates_api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Deposit Rates API&lt;br&gt;REST" vertex="1">
+          <mxGeometry height="90" width="230" x="450" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="rates_db" parent="1" style="shape=cylinder3d;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Deposit Rates DB&lt;br&gt;версии, аудит, продукты" vertex="1">
+          <mxGeometry height="90" width="210" x="360" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="cc_adapter" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Call Center Rates Adapter&lt;br&gt;sync/cache/format mapping" vertex="1">
+          <mxGeometry height="100" width="260" x="780" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="cc_db" parent="1" style="shape=cylinder3d;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Call Center DB&lt;br&gt;локальный кеш ставок" vertex="1">
+          <mxGeometry height="80" width="220" x="870" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="cc_ui" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Call Center UI&lt;br&gt;экран консультации" vertex="1">
+          <mxGeometry height="90" width="260" x="460" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="export_service" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Rate Export Service&lt;br&gt;CSV/XLSX generator" vertex="1">
+          <mxGeometry height="100" width="250" x="950" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="export_log" parent="1" style="shape=cylinder3d;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Export Journal DB&lt;br&gt;статусы и аудит" vertex="1">
+          <mxGeometry height="80" width="220" x="830" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="sftp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Bank SFTP Server&lt;br&gt;protected file exchange" vertex="1">
+          <mxGeometry height="90" width="230" x="1250" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="partner" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Partner Call Center System&lt;br&gt;external" vertex="1">
+          <mxGeometry height="90" width="250" x="1350" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="monitoring" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Monitoring &amp; Alerts" vertex="1">
+          <mxGeometry height="80" width="230" x="1320" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_0" edge="1" parent="1" source="back" style="endArrow=block;html=1;rounded=0;" target="rates_admin" value="вносит ставки">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_1" edge="1" parent="1" source="credit" style="endArrow=block;html=1;rounded=0;" target="rates_admin" value="параметры спец. условий">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_2" edge="1" parent="1" source="rates_admin" style="endArrow=block;html=1;rounded=0;" target="rates_api" value="сохранить версию">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_3" edge="1" parent="1" source="rates_api" style="endArrow=block;html=1;rounded=0;" target="rates_db" value="read/write">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_4" edge="1" parent="1" source="cc_adapter" style="endArrow=block;html=1;rounded=0;" target="rates_api" value="получает актуальные ставки">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_5" edge="1" parent="1" source="cc_adapter" style="endArrow=block;html=1;rounded=0;" target="cc_db" value="обновляет кеш">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_6" edge="1" parent="1" source="cc_ui" style="endArrow=block;html=1;rounded=0;" target="cc_db" value="читает ставки">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_7" edge="1" parent="1" source="operator" style="endArrow=block;html=1;rounded=0;" target="cc_ui" value="консультирует клиента">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_8" edge="1" parent="1" source="export_service" style="endArrow=block;html=1;rounded=0;" target="rates_api" value="получает версию ставок">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_9" edge="1" parent="1" source="export_service" style="endArrow=block;html=1;rounded=0;" target="export_log" value="статус экспорта">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_10" edge="1" parent="1" source="export_service" style="endArrow=block;html=1;rounded=0;" target="sftp" value="публикует файл">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_11" edge="1" parent="1" source="partner" style="endArrow=block;html=1;rounded=0;" target="sftp" value="забирает файл">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_12" edge="1" parent="1" source="export_service" style="endArrow=block;html=1;rounded=0;" target="monitoring" value="метрики и ошибки">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_13" edge="1" parent="1" source="cc_adapter" style="endArrow=block;html=1;rounded=0;" target="monitoring" value="метрики sync">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Компонентная схема показывает только изменения для кейса ставок. Ключевые решения: единый источник ставок, кеш для внутреннего кол-центра, файловый экспорт через SFTP для партнёра, журнал и мониторинг экспорта." vertex="1">
+          <mxGeometry height="70" width="1120" x="220" y="860" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

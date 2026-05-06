@@ -1,0 +1,84 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="ee6223b3-25fb-4997-9272-e8233f22b4be">
+    <mxGraphModel dx="3585" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" value="C4 Context. Передача ставок в кол-центры" vertex="1">
+          <mxGeometry height="40" width="1350" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="client" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Клиент" vertex="1">
+          <mxGeometry height="80" width="60" x="50" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="operator" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Оператор внутреннего кол-центра" vertex="1">
+          <mxGeometry height="70" width="50" x="200" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="partner_operator" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Оператор партнёрского кол-центра" vertex="1">
+          <mxGeometry height="70" width="50" x="60" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="back" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Бэк-офис депозитов" vertex="1">
+          <mxGeometry height="70" width="50" x="1190" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="credit" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Бэк-офис кредитов" vertex="1">
+          <mxGeometry height="80" width="50" x="1220" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="rates" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Deposit Rates Service&lt;br&gt;&lt;b&gt;единый источник ставок&lt;/b&gt;" vertex="1">
+          <mxGeometry height="120" width="260" x="520" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="internal_cc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Система кол-центра банка" vertex="1">
+          <mxGeometry height="90" width="240" x="290" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="export" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Rate Export Service" vertex="1">
+          <mxGeometry height="90" width="220" x="890" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="sftp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="SFTP&lt;br&gt;файловый обмен" vertex="1">
+          <mxGeometry height="80" width="220" x="880" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="partner_cc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Система партнёрского кол-центра" vertex="1">
+          <mxGeometry height="90" width="260" x="400" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="site_ibank" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Сайт и интернет-банк" vertex="1">
+          <mxGeometry height="90" width="240" x="370" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_0" edge="1" parent="1" source="back" style="endArrow=block;html=1;rounded=0;" target="rates" value="обновляет базовые ставки">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_1" edge="1" parent="1" source="credit" style="endArrow=block;html=1;rounded=0;" target="rates" value="параметры специальных условий">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_2" edge="1" parent="1" source="site_ibank" style="endArrow=block;html=1;rounded=0;" target="rates" value="получают ставки для онлайн-каналов">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_3" edge="1" parent="1" source="internal_cc" style="endArrow=block;html=1;rounded=0;" target="rates" value="получает актуальные&amp;nbsp;&lt;div&gt;ставки через API/адаптер&lt;/div&gt;">
+          <mxGeometry relative="1" x="0.2737" y="-22" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_4" edge="1" parent="1" source="operator" style="endArrow=block;html=1;rounded=0;" target="internal_cc" value="консультирует клиента">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_5" edge="1" parent="1" source="client" style="endArrow=block;html=1;rounded=0;" target="operator" value="звонок по депозиту">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_6" edge="1" parent="1" source="rates" style="endArrow=block;html=1;rounded=0;" target="export" value="актуальная версия ставок">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_7" edge="1" parent="1" source="export" style="endArrow=block;html=1;rounded=0;" target="sftp" value="публикация CSV/XLSX">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_8" edge="1" parent="1" source="sftp" style="endArrow=block;html=1;rounded=0;" target="partner_cc" value="загрузка файла">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_9" edge="1" parent="1" source="partner_operator" style="endArrow=block;html=1;rounded=0;" target="partner_cc" value="консультации по файлу ставок">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_10" edge="1" parent="1" source="client" style="endArrow=block;html=1;rounded=0;" target="partner_operator" value="звонок при перегрузке банка">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="MVP: внутренний кол-центр получает ставки из Deposit Rates Service, партнёрский кол-центр получает файл через SFTP. Персональные данные в файл не передаются." vertex="1">
+          <mxGeometry height="70" width="1060" x="200" y="820" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
