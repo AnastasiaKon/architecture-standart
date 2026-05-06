@@ -1,10 +1,91 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="2ab0bc73-b49b-4b75-a382-12fa89fdbbc7">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1200" math="0" shadow="0">
+    <mxGraphModel dx="1664" dy="812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1200" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <mxCell id="title" value="C4 Context. MVP открытия депозитов онлайн" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" vertex="1" edge="0" parent="1"><mxGeometry x="20" y="20" width="1300" height="40" as="geometry"/></mxCell><mxCell id="client" value="Клиент банка" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" edge="0" parent="1"><mxGeometry x="80" y="170" width="90" height="120" as="geometry"/></mxCell><mxCell id="new_client" value="Новый клиент" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" edge="0" parent="1"><mxGeometry x="80" y="420" width="90" height="120" as="geometry"/></mxCell><mxCell id="back_deposit" value="Бэк-офис депозитов" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" edge="0" parent="1"><mxGeometry x="1180" y="130" width="120" height="120" as="geometry"/></mxCell><mxCell id="back_credit" value="Бэк-офис кредитов" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" edge="0" parent="1"><mxGeometry x="1180" y="330" width="120" height="120" as="geometry"/></mxCell><mxCell id="cc_operator" value="Оператор кол-центра" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" edge="0" parent="1"><mxGeometry x="1180" y="540" width="120" height="120" as="geometry"/></mxCell><mxCell id="site" value="Сайт банка" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" edge="0" parent="1"><mxGeometry x="280" y="430" width="190" height="80" as="geometry"/></mxCell><mxCell id="ibank" value="Интернет-банк" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" edge="0" parent="1"><mxGeometry x="280" y="180" width="190" height="80" as="geometry"/></mxCell><mxCell id="deposit_platform" value="Платформа депозитных заявок и ставок&lt;br&gt;&lt;b&gt;новый домен MVP&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" edge="0" parent="1"><mxGeometry x="580" y="250" width="270" height="150" as="geometry"/></mxCell><mxCell id="abs" value="АБС&lt;br&gt;core banking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" edge="0" parent="1"><mxGeometry x="930" y="230" width="210" height="100" as="geometry"/></mxCell><mxCell id="cc" value="Система кол-центра" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" edge="0" parent="1"><mxGeometry x="930" y="540" width="210" height="90" as="geometry"/></mxCell><mxCell id="sms" value="СМС-шлюз телеком-оператора" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" edge="0" parent="1"><mxGeometry x="580" y="570" width="250" height="80" as="geometry"/></mxCell><mxCell id="edge_0" value="подаёт заявку на депозит" style="endArrow=block;html=1;rounded=0;" vertex="0" edge="1" parent="1" source="client" target="ibank"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="edge_1" value="оставляет заявку и телефон" style="endArrow=block;html=1;rounded=0;" vertex="0" edge="1" parent="1" source="new_client" target="site"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="edge_2" value="создание заявки, получение ставок, СМС-подтверждение" style="endArrow=block;html=1;rounded=0;" vertex="0" edge="1" parent="1" source="ibank" target="deposit_platform"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="edge_3" value="создание заявки, получение публичных ставок" style="endArrow=block;html=1;rounded=0;" vertex="0" edge="1" parent="1" source="site" target="deposit_platform"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="edge_4" value="контролируемая интеграция без прямого доступа к БД" style="endArrow=block;html=1;rounded=0;" vertex="0" edge="1" parent="1" source="deposit_platform" target="abs"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="edge_5" value="СМС-коды и уведомления" style="endArrow=block;html=1;rounded=0;" vertex="0" edge="1" parent="1" source="deposit_platform" target="sms"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="edge_6" value="уведомления" style="endArrow=block;html=1;rounded=0;" vertex="0" edge="1" parent="1" source="sms" target="client"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="edge_7" value="уведомления" style="endArrow=block;html=1;rounded=0;" vertex="0" edge="1" parent="1" source="sms" target="new_client"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="edge_8" value="обработка заявки и открытие депозита" style="endArrow=block;html=1;rounded=0;" vertex="0" edge="1" parent="1" source="back_deposit" target="abs"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="edge_9" value="управление ставками и статусами" style="endArrow=block;html=1;rounded=0;" vertex="0" edge="1" parent="1" source="back_deposit" target="deposit_platform"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="edge_10" value="данные для специальных ставок" style="endArrow=block;html=1;rounded=0;" vertex="0" edge="1" parent="1" source="back_credit" target="deposit_platform"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="edge_11" value="работа с обращениями клиентов" style="endArrow=block;html=1;rounded=0;" vertex="0" edge="1" parent="1" source="cc_operator" target="cc"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="edge_12" value="передача заявок с сайта / статусов" style="endArrow=block;html=1;rounded=0;" vertex="0" edge="1" parent="1" source="deposit_platform" target="cc"><mxGeometry relative="1" as="geometry"/></mxCell><mxCell id="note" value="MVP: онлайн-каналы принимают заявки, но финальное подтверждение и открытие депозита выполняет бэк-офис через АБС. Прямая интеграция интернет-банка с БД АБС в новом процессе не используется." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" edge="0" parent="1"><mxGeometry x="170" y="720" width="1040" height="80" as="geometry"/></mxCell>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" value="C4 Context. MVP открытия депозитов онлайн" vertex="1">
+          <mxGeometry height="40" width="1300" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="client" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Клиент банка" vertex="1">
+          <mxGeometry height="90" width="50" x="80" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="new_client" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Новый клиент" vertex="1">
+          <mxGeometry height="100" width="60" x="80" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="back_deposit" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Бэк-офис депозитов" vertex="1">
+          <mxGeometry height="90" width="40" x="1400" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="back_credit" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Бэк-офис кредитов" vertex="1">
+          <mxGeometry height="70" width="50" x="1400" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="cc_operator" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Оператор кол-центра" vertex="1">
+          <mxGeometry height="80" width="60" x="1395" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="site" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Сайт банка" vertex="1">
+          <mxGeometry height="80" width="190" x="530" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="ibank" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Интернет-банк" vertex="1">
+          <mxGeometry height="80" width="190" x="280" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="deposit_platform" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Платформа депозитных заявок и ставок&lt;br&gt;&lt;b&gt;новый домен MVP&lt;/b&gt;" vertex="1">
+          <mxGeometry height="150" width="270" x="700" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="abs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="АБС&lt;br&gt;core banking" vertex="1">
+          <mxGeometry height="100" width="210" x="760" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Система кол-центра" vertex="1">
+          <mxGeometry height="90" width="210" x="920" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="sms" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="СМС-шлюз телеком-оператора" vertex="1">
+          <mxGeometry height="80" width="250" x="190" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_0" edge="1" parent="1" source="client" style="endArrow=block;html=1;rounded=0;" target="ibank" value="подаёт заявку на депозит">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_1" edge="1" parent="1" source="new_client" style="endArrow=block;html=1;rounded=0;" target="site" value="оставляет заявку и телефон">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_2" edge="1" parent="1" source="ibank" style="endArrow=block;html=1;rounded=0;" target="deposit_platform" value="создание заявки, получение ставок,&lt;div&gt;&amp;nbsp;СМС-подтверждение&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.4565" y="-38" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_3" edge="1" parent="1" source="site" style="endArrow=block;html=1;rounded=0;" target="deposit_platform" value="создание заявки,&amp;nbsp;&lt;div&gt;получение публичных ставок&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_4" edge="1" parent="1" source="deposit_platform" style="endArrow=block;html=1;rounded=0;" target="abs" value="контролируемая интеграция&amp;nbsp;&lt;div&gt;без прямого доступа к БД&lt;/div&gt;">
+          <mxGeometry relative="1" x="0.1645" y="-17" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_5" edge="1" parent="1" source="deposit_platform" style="endArrow=block;html=1;rounded=0;" target="sms" value="СМС-коды и уведомления">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_6" edge="1" parent="1" source="sms" style="endArrow=block;html=1;rounded=0;" target="client" value="уведомления">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_7" edge="1" parent="1" source="sms" style="endArrow=block;html=1;rounded=0;" target="new_client" value="уведомления">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_8" edge="1" parent="1" source="back_deposit" style="endArrow=block;html=1;rounded=0;" target="abs" value="обработка заявки и открытие депозита">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_9" edge="1" parent="1" source="back_deposit" style="endArrow=block;html=1;rounded=0;" target="deposit_platform" value="управление ставками и статусами">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_10" edge="1" parent="1" source="back_credit" style="endArrow=block;html=1;rounded=0;" target="deposit_platform" value="данные для специальных ставок">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_11" edge="1" parent="1" source="cc_operator" style="endArrow=block;html=1;rounded=0;" target="cc" value="работа с обращениями клиентов">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_12" edge="1" parent="1" source="deposit_platform" style="endArrow=block;html=1;rounded=0;" target="cc" value="передача заявок с сайта / статусов">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="MVP: онлайн-каналы принимают заявки, но финальное подтверждение и открытие депозита выполняет бэк-офис через АБС. Прямая интеграция интернет-банка с БД АБС в новом процессе не используется." vertex="1">
+          <mxGeometry height="80" width="1040" x="170" y="720" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
